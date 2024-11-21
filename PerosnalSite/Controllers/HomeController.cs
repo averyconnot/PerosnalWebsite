@@ -18,7 +18,15 @@ namespace PerosnalSite.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Projects()
+        {
+            return View();
+        }
+        public IActionResult Skills()
         {
             return View();
         }
