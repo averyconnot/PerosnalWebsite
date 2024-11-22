@@ -1,7 +1,30 @@
-﻿@*
-*@
-@{
-}
-<h1>Projects I Have Worked On</h1>
-<p> This page is dedicated to my completed projects from MIS throughout the years</p>
+﻿
+@model List<(string Title, string Description, string Link)>
+<div class="text-center project-header">
+    <h1>PROJECTS I HAVE WORKED ON</h1>
+    <p>This page is dedicated to my completed projects from MIS 3033</p>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 projects-title">MY PROJECTS</h2>
+</div>
+
+    <div class="row">
+        @foreach (var project in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                        <a href="@project.Link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 

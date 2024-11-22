@@ -24,7 +24,13 @@ namespace PerosnalSite.Controllers
         }
         public IActionResult Projects()
         {
-            return View();
+            var projects= new List<(string Title, string Description, string Link)>
+                {
+                    ("Web Application","A github link that showcases skills learned in MVC ASP.NET Core and Bootstrap.", "https://github.com/MIS-3033/hwk-10---mvc-ef-averyconnot"),
+                    ("HTML Application", "A github link to an HTML project where JSON and C# was incorporated", "https://github.com/MIS-3033/hwk-5---consuming-json-averyconnot"),
+                    ("Latest Exam Application","A github link that demonstrates my latest exam in MIS 3033", "https://github.com/MIS-3033/exam-2-averyconnot")
+                };
+            return View(projects);
         }
         public IActionResult Skills()
         {
